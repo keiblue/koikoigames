@@ -1,0 +1,26 @@
+<h1>Admin panel control</h1>
+<div class="">
+    <h2>Control de miembros</h2>
+    <% @members.each do |m| %>
+    <div class="no-margin row col" >
+            <div class="col-2 no-margin">
+                    <%#= link_to 'vamoh', m %>
+                    <%= link_to (image_tag m.image,class: 'img-responsive about-pic') ,  m %>
+            </div>
+            <div class="col-10  no-margin align-middle">
+                    <h3 ><%=m.name%> <%=m.last_name%> </h3>
+                    <h4><%= m.nick%> - <%= m.rol%> </h4>
+            </div>
+
+
+            <p><%= m.bio%></p>
+            <div class="row no-margin">
+                <%= link_to 'Editar', edit_member_path(m.id) %> <%= link_to 'Eliminar', m, method: :delete,data:{ confirm:'seguro que me eliminaras? u.u'} %>
+            </div>
+    </div>
+    <% end %>  
+    <%= link_to 'Crear Nuevo', new_member_path %>  
+</div>
+
+<h2>control de proyectos</h2>
+<%=  link_to  'Logout', destroy_user_session_path , method: :delete %>

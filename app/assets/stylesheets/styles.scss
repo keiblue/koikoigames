@@ -1,0 +1,20 @@
+// Place all the styles related to the Page controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+header{
+    //display: flex;
+    //justify-content:space-between;
+}
+.no-margin{
+    margin: 0px !important;
+}
+.no-padding{
+    padding: 0px !important;
+}
+.about-pic{
+    max-height: 90px;
+    border-radius: 50%;
+}
+.fa-profile{
+    font-size: 20px;
+}

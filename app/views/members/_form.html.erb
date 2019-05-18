@@ -1,0 +1,74 @@
+<%= form_with(model: member, local: true) do |form| %>
+  <% if member.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(member.errors.count, "error") %> prohibited this member from being saved:</h2>
+
+      <ul>
+      <% member.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+ <% if  member.image.attached? %>
+    <%= image_tag member.image, class:' img-responsive about-pic' %>
+  <% end %>
+  <div class="field">
+    <%= form.label :image %>
+    <%= form.file_field :image %>
+  </div>
+
+
+  <div class="field">
+    <%= form.label :name %>
+    <%= form.text_field :name %>
+  </div>
+
+  <div class="field">
+    <%= form.label :last_name %>
+    <%= form.text_field :last_name %>
+  </div>
+
+  <div class="field">
+    <%= form.label :nick %>
+    <%= form.text_field :nick %>
+  </div>
+
+  <div class="field">
+    <%= form.label :fb_link %>
+    <%= form.text_field :fb_link %>
+  </div>
+
+  <div class="field">
+    <%= form.label :insta_link %>
+    <%= form.text_field :insta_link %>
+  </div>
+
+  <div class="field">
+    <%= form.label :lnk_link %>
+    <%= form.text_field :lnk_link %>
+  </div>
+  <div class="field">
+      <%= form.label :twitt_link %>
+      <%= form.text_field :twitt_link %>
+    </div>
+
+  <div class="field">
+    <%= form.label :bio %>
+    <%= form.text_area :bio %>
+  </div>
+
+  <div class="field">
+    <%= form.label :rol %>
+    <%= form.text_field :rol %>
+  </div>
+
+  <div class="field">
+    <%= form.label :age %>
+    <%= form.number_field :age %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

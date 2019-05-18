@@ -1,0 +1,27 @@
+<p id="notice"><%= notice %></p>
+
+  <p class="text-center">
+    <%=image_tag @member.image ,class: 'img-responsive about-pic'%>
+  </p>
+
+<h2 class="text-center">
+  <%= @member.name %>
+  <%= @member.last_name %>
+</h2>
+<h5 class="text-center"><%= @member.rol%></h5>
+<h6 class="text-center">
+  <%= @member.nick %>/ LV:<%= @member.age %>
+</h6>
+
+
+<p class="text-center">
+    <%= @member.bio %>
+  </p>
+<%= render 'members/links', profile: @member%>
+
+
+
+
+
+
+

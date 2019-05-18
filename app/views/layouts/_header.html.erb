@@ -1,0 +1,14 @@
+<header class="row justify-content-between no-margin align-middle">
+    <div class="logo">
+        <img src="" alt="" class="img-responsive" style="max-height:75px;">
+    </div>
+    <nav class="navbar">
+        <ul class="nav justify-content-end">
+            <li class="nav-item"><%= link_to 'Home', root_path ,class: 'nav-link' %></li>
+            <li class="nav-item"><%= link_to 'Blog', root_path ,class: 'nav-link' %></li>
+            <li class="nav-item"><%= link_to 'Nosotros', root_path(anchor: 'aboutUs') ,class: 'nav-link' %></li>
+            <li class="nav-item"><%= link_to 'Proyectos', root_path(anchor: 'proyectos') ,class: 'nav-link' %></li>
+            <li class="nav-item"><%= link_to 'Team', root_path(anchor: 'team') ,class: 'nav-link' %></li>
+        </ul>
+    </nav>
+</header>

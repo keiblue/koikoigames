@@ -1,0 +1,23 @@
+
+<div style="height:500px;">
+    <p>Banner y carrusel</p>
+</div>
+<h2 class="text-center ">Nuestro Equipo</h2> 
+<div id="team" class="row wrap no-margin" >
+    <% @members.each do |m| %>
+    <div class="card col" style="padding-top:15px;">
+        <div class="text-center" ><%= image_tag m.image ,class: 'img-responsive about-pic'%></div>
+        <div class=""><h2><%= m.name %> <%= m.last_name %></h2> </div>
+        <div><%=m.nick%> - <%= m.rol%> </div>
+        <p><%= m.bio %> </p>
+        <%= render  'members/links', profile: m%>
+        <div class="text-right"><%=  link_to  "Ver mas", m %></div>
+        
+    </div>
+    
+    <% end %>
+</div>
+<h2 class="text-center">sobre nosotors</h2>
+<div id="aboutUs" style="height:500px;">
+        <p>somos un Empresa dedicada al la creacion de videojuegos  con un proposito  educativo </p>
+</div>
