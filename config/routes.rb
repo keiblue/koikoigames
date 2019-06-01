@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
   root 'pages#index'
-  get '/admin', to: 'pages#admin' ,as: 'admin'
+  get '/panel', to: 'pages#panel' ,as: 'panel'
   resources :members
   devise_for :users
 

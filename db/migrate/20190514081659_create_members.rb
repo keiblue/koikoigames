@@ -10,7 +10,7 @@ class CreateMembers < ActiveRecord::Migration[5.2]
       t.string :twitt_link
       t.text   :bio
       t.string :rol
-      t.integer :age
+      t.date :birthday
 
       t.timestamps
     end

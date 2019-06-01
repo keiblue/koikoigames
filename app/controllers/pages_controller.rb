@@ -1,10 +1,10 @@
 class PagesController < ApplicationController
   before_action :all_members
-  before_action  :authenticate_user!, only:[:admin]
+  before_action  :authenticate_user!, only:[:panel]
   def index
     
   end
-  def admin
+  def panel
      
   end
   def all_members

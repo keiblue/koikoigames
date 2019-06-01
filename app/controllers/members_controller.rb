@@ -28,7 +28,7 @@ before_action :authenticate_user!, except: :show
 
     respond_to do |format|
       if @member.save
-        format.html { redirect_to admin_path, notice: 'Miembro Creado Exitosamente' }
+        format.html { redirect_to panel_path, notice: 'Miembro Creado Exitosamente' }
         format.json { render :show, status: :created, location: @member }
       else
         format.html { render :new }
@@ -42,7 +42,7 @@ before_action :authenticate_user!, except: :show
   def update
     respond_to do |format|
       if @member.update(member_params)
-        format.html { redirect_to admin_path, notice: 'Miembro actualizado exitosamente' }
+        format.html { redirect_to panel_path, notice: 'Miembro actualizado exitosamente' }
         format.json { render :show, status: :ok, location: @member }
       else
         format.html { render :edit }
@@ -56,7 +56,7 @@ before_action :authenticate_user!, except: :show
   def destroy
     @member.destroy
     respond_to do |format|
-      format.html { redirect_to admin_path, notice: 'Miembro eliminado exitosamente' }
+      format.html { redirect_to panel_path, notice: 'Miembro eliminado exitosamente' }
       format.json { head :no_content }
       #redirect_to admin_path_path
     end
@@ -70,6 +70,6 @@ before_action :authenticate_user!, except: :show
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def member_params
-      params.require(:member).permit(:name, :last_name, :nick, :fb_link,:twitt_link, :insta_link, :lnk_link, :bio, :rol, :age,:image)
+      params.require(:member).permit(:name, :last_name, :nick, :fb_link,:twitt_link, :insta_link, :lnk_link, :bio, :rol, :birthday,:image)
     end
 end
